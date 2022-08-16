@@ -27,11 +27,11 @@ require_once("../include/db.php");
                 </div>
                 <div class="m-right">
                     <ul class="m-menu">
-                        <li class="m-menu-li"><a href="index.php" class="m-menu-link"><i class="fas fa-home"></i>Home</a></li>
-                        <li class="m-menu-li"><a href="index.php" class="m-menu-link"><i class="fas fa-home"></i>Arabic</a></li>
-                        <li class="m-menu-li"><a href="index.php" class="m-menu-link"><i class="fas fa-home"></i>Arabic-Bangla</a></li>
-                        <li class="m-menu-li"><a href="index.php" class="m-menu-link"><i class="fas fa-home"></i>Arabic-English</a></li>
-                        <li class="m-menu-li"><a href="index.php" class="m-menu-link"><i class="fas fa-home"></i>About</a></li>
+                        <li class="m-menu-li"><a href="../index.php" class="m-menu-link"><i class="fas fa-home"></i>Home</a></li>
+                        <li class="m-menu-li"><a href="../index/arabic.php" class="m-menu-link"><i class="fas fa-equals"></i>Arabic</a></li>
+                        <li class="m-menu-li"><a href="../index/arabic-bengali.php" class="m-menu-link"><i class="fas fa-equals"></i>Arabic-Bangla</a></li>
+                        <li class="m-menu-li"><a href="../index/arabic-english.php" class="m-menu-link"><i class="fas fa-equals"></i>Arabic-English</a></li>
+                        <li class="m-menu-li"><a href="../pages/about.php" class="m-menu-link"><i class="fas fa-info-circle"></i>About</a></li>
                     </ul>
                 </div>
             </div>
@@ -64,54 +64,45 @@ require_once("../include/db.php");
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="text-center"><?php echo $_GET['name']; ?></h1>
+                        <p class="text-center">Total Ayat : <?php echo $_GET['ty']; ?></p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <table class="table table-striped table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>Verse No.</th>
-                                    <th>Arabic</th>
-                                    <th>Bangla Translation</th>
-                                </tr>
-                            </thead>
-                            <tbody>
 
-                                <?php
-                                // $query = "SELECT * FROM `quranar` where SuraIDAr = '{$_GET['no']}'";
-                                // echo $_GET['no'];
-                                // echo $_GET['ty'];
+                        <?php
+                        // $query = "SELECT * FROM `quranar` where SuraIDAr = '{$_GET['no']}'";
+                        // echo $_GET['no'];
+                        // echo $_GET['ty'];
 
 
-                                $query = "SELECT bn_bengali.text, bn_bengali.aya, quranar.AyahTextAr FROM bn_bengali LEFT JOIN quranar ON quranar.VerseIDAr = bn_bengali.aya WHERE sura='{$_GET['no']}' LIMIT 300";
-                                // $query = "SELECT bn_bengali.text, bn_bengali.aya, quranar.AyahTextAr FROM bn_bengali LEFT JOIN quranar ON quranar.VerseIDAr = bn_bengali.aya  WHERE sura=1 LIMIT 7";
-                                $result = mysqli_query($connection, $query);
-                                if (!$result) {
-                                    die("Query Failed.");
+                        $query = "SELECT bn_bengali.text, bn_bengali.aya, quranar.AyahTextAr FROM bn_bengali LEFT JOIN quranar ON quranar.VerseIDAr = bn_bengali.aya WHERE sura='{$_GET['no']}' LIMIT 300";
+                        // $query = "SELECT bn_bengali.text, bn_bengali.aya, quranar.AyahTextAr FROM bn_bengali LEFT JOIN quranar ON quranar.VerseIDAr = bn_bengali.aya  WHERE sura=1 LIMIT 7";
+                        $result = mysqli_query($connection, $query);
+
+
+                        if (!$result) {
+                            die("Query Failed.");
+                        } else {
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                if ($row['aya'] < $_GET['ty']) {
+                                    echo "<div class='ayah'>";
+                                    echo "<div class=\"ayah-text\">{$row['AyahTextAr']}</div>";
+                                    echo "<div class=\"ayah-text-bengali\">{$row['text']}</div>";
+                                    echo "<div class=\"ayah-id-bengali\">Ayat No. - {$row['aya']}</div>";
+                                    echo "</div>";
                                 } else {
-                                    while ($row = mysqli_fetch_assoc($result)) {
-                                        if ($row['aya'] < $_GET['ty']) {
-                                            echo "<tr>";
-                                            echo "<td>{$row['aya']}</td>";
-                                            echo "<td>{$row['AyahTextAr']}</td>";
-                                            echo "<td>{$row['text']}</td>";
-                                            echo "</tr>";
-                                        } else {
-                                            echo "<tr>";
-                                            echo "<td>{$row['aya']}</td>";
-                                            echo "<td>{$row['AyahTextAr']}</td>";
-                                            echo "<td>{$row['text']}</td>";
-                                            echo "</tr>";
-                                            break;
-                                        }
-                                        // echo implode(" ",$row);
-
-                                    }
+                                    echo "<div class='ayah'>";
+                                    echo "<div class=\"ayah-text\">{$row['AyahTextAr']}</div>";
+                                    echo "<div class=\"ayah-text-bengali\">{$row['text']}</div>";
+                                    echo "<div class=\"ayah-id-bengali\">Ayat No. - {$row['aya']}</div>";
+                                    echo "</div>";
+                                    break;
                                 }
-                                ?>
-                            </tbody>
-                        </table>
+                            }
+                        }
+
+                        ?>
                     </div>
                 </div>
             </div>

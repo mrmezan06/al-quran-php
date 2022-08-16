@@ -9,7 +9,7 @@ require_once("../include/DB.php");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Al Quran</title>
+    <title>Arabic</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.min.css" integrity="sha512-ykRBEJhyZ+B/BIJcBuOyUoIxh0OfdICfHPnPfBy7eIiyJv536ojTCsgX8aqrLQ9VJZHGz4tvYyzOM0lkgmQZGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="../index.css">
@@ -27,11 +27,11 @@ require_once("../include/DB.php");
                 </div>
                 <div class="m-right">
                     <ul class="m-menu">
-                        <li class="m-menu-li"><a href="index.php" class="m-menu-link"><i class="fas fa-home"></i>Home</a></li>
-                        <li class="m-menu-li"><a href="./pages/arabic.php" class="m-menu-link"><i class="fas fa-equals"></i>Arabic</a></li>
-                        <li class="m-menu-li"><a href="./pages/arabic-bengali.php" class="m-menu-link"><i class="fas fa-equals"></i>Arabic-Bangla</a></li>
-                        <li class="m-menu-li"><a href="./pages/arabic-english.php" class="m-menu-link"><i class="fas fa-equals"></i>Arabic-English</a></li>
-                        <li class="m-menu-li"><a href="./pages/about.php" class="m-menu-link"><i class="fas fa-info-circle"></i>About</a></li>
+                        <li class="m-menu-li"><a href="../index.php" class="m-menu-link"><i class="fas fa-home"></i>Home</a></li>
+                        <li class="m-menu-li"><a href="../index/arabic.php" class="m-menu-link"><i class="fas fa-equals"></i>Arabic</a></li>
+                        <li class="m-menu-li"><a href="../index/arabic-bengali.php" class="m-menu-link"><i class="fas fa-equals"></i>Arabic-Bangla</a></li>
+                        <li class="m-menu-li"><a href="../index/arabic-english.php" class="m-menu-link"><i class="fas fa-equals"></i>Arabic-English</a></li>
+                        <li class="m-menu-li"><a href="../pages/about.php" class="m-menu-link"><i class="fas fa-info-circle"></i>About</a></li>
                     </ul>
                 </div>
             </div>
