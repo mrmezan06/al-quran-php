@@ -28,10 +28,10 @@ require_once("Include/DB.php");
                 <div class="m-right">
                     <ul class="m-menu">
                         <li class="m-menu-li"><a href="index.php" class="m-menu-link"><i class="fas fa-home"></i>Home</a></li>
-                        <li class="m-menu-li"><a href="index.php" class="m-menu-link"><i class="fas fa-home"></i>Arabic</a></li>
-                        <li class="m-menu-li"><a href="index.php" class="m-menu-link"><i class="fas fa-home"></i>Arabic-Bangla</a></li>
-                        <li class="m-menu-li"><a href="index.php" class="m-menu-link"><i class="fas fa-home"></i>Arabic-English</a></li>
-                        <li class="m-menu-li"><a href="index.php" class="m-menu-link"><i class="fas fa-home"></i>About</a></li>
+                        <li class="m-menu-li"><a href="./pages/arabic.php" class="m-menu-link"><i class="fas fa-equals"></i>Arabic</a></li>
+                        <li class="m-menu-li"><a href="./pages/arabic-bengali.php" class="m-menu-link"><i class="fas fa-equals"></i>Arabic-Bangla</a></li>
+                        <li class="m-menu-li"><a href="./pages/arabic-english.php" class="m-menu-link"><i class="fas fa-equals"></i>Arabic-English</a></li>
+                        <li class="m-menu-li"><a href="./pages/about.php" class="m-menu-link"><i class="fas fa-info-circle"></i>About</a></li>
                     </ul>
                 </div>
             </div>
@@ -59,19 +59,20 @@ require_once("Include/DB.php");
             </div>
         </div>
         <div class="main-content">
-                <table class="table table-striped table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Sura Number</th>
-                            <th>Sura Name</th>
-                            <th>Sura Translation</th>
-                            <th>English Name</th>
-                            <th>Total Ayat</th>
-                            <th>Total Ruku</th>
-                            <th>Read</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+            <!-- Main Content -->
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Sura Number</th>
+                        <th>Sura Name</th>
+                        <th>Sura Translation</th>
+                        <th>English Name</th>
+                        <th>Total Ayat</th>
+                        <th>Total Ruku</th>
+                        <th>Read</th>
+                    </tr>
+                </thead>
+                <tbody>
                     <?php
                     $query = "SELECT * FROM `sura` order by sura_no";
                     $result = mysqli_query($connection, $query);
@@ -92,9 +93,10 @@ require_once("Include/DB.php");
                         }
                     }
                     ?>
-                    </tbody>
-                </table>
-            </div>
+                </tbody>
+            </table>
+            <!-- End Main Content -->
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

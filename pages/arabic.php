@@ -68,50 +68,7 @@ require_once("../include/db.php");
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <table class="table table-striped table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>Verse No.</th>
-                                    <th>Arabic</th>
-                                    <th>Bangla Translation</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-
-                                <?php
-                                // $query = "SELECT * FROM `quranar` where SuraIDAr = '{$_GET['no']}'";
-                                // echo $_GET['no'];
-                                // echo $_GET['ty'];
-
-
-                                $query = "SELECT bn_bengali.text, bn_bengali.aya, quranar.AyahTextAr FROM bn_bengali LEFT JOIN quranar ON quranar.VerseIDAr = bn_bengali.aya WHERE sura='{$_GET['no']}' LIMIT 300";
-                                // $query = "SELECT bn_bengali.text, bn_bengali.aya, quranar.AyahTextAr FROM bn_bengali LEFT JOIN quranar ON quranar.VerseIDAr = bn_bengali.aya  WHERE sura=1 LIMIT 7";
-                                $result = mysqli_query($connection, $query);
-                                if (!$result) {
-                                    die("Query Failed.");
-                                } else {
-                                    while ($row = mysqli_fetch_assoc($result)) {
-                                        if ($row['aya'] < $_GET['ty']) {
-                                            echo "<tr>";
-                                            echo "<td>{$row['aya']}</td>";
-                                            echo "<td>{$row['AyahTextAr']}</td>";
-                                            echo "<td>{$row['text']}</td>";
-                                            echo "</tr>";
-                                        } else {
-                                            echo "<tr>";
-                                            echo "<td>{$row['aya']}</td>";
-                                            echo "<td>{$row['AyahTextAr']}</td>";
-                                            echo "<td>{$row['text']}</td>";
-                                            echo "</tr>";
-                                            break;
-                                        }
-                                        // echo implode(" ",$row);
-
-                                    }
-                                }
-                                ?>
-                            </tbody>
-                        </table>
+                        
                     </div>
                 </div>
             </div>
