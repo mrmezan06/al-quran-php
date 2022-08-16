@@ -185,3 +185,42 @@
   background-color: #fff;
   overflow: scroll;
 }
+
+/* Content CSS */
+
+.col-md-12 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #fff;
+}
+.col-md-12 p {
+  font-weight: bold;
+}
+
+.col-md-12 h1 {
+  margin-top: 5px;
+  font-weight: bolder;
+}
+
+.ayah {
+  width: 100%;
+  border: 1px solid rgb(99, 73, 73);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.ayah-text {
+  width: 100%;
+  font-size: 24px;
+  text-align: right;
+}
+
+.ayah-id {
+  width: 100%;
+  font-size: 16px;
+  text-align: left;
+}

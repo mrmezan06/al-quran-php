@@ -27,11 +27,11 @@ require_once("../include/db.php");
                 </div>
                 <div class="m-right">
                     <ul class="m-menu">
-                        <li class="m-menu-li"><a href="index.php" class="m-menu-link"><i class="fas fa-home"></i>Home</a></li>
-                        <li class="m-menu-li"><a href="index.php" class="m-menu-link"><i class="fas fa-home"></i>Arabic</a></li>
-                        <li class="m-menu-li"><a href="index.php" class="m-menu-link"><i class="fas fa-home"></i>Arabic-Bangla</a></li>
-                        <li class="m-menu-li"><a href="index.php" class="m-menu-link"><i class="fas fa-home"></i>Arabic-English</a></li>
-                        <li class="m-menu-li"><a href="index.php" class="m-menu-link"><i class="fas fa-home"></i>About</a></li>
+                        <li class="m-menu-li"><a href="../index.php" class="m-menu-link"><i class="fas fa-home"></i>Home</a></li>
+                        <li class="m-menu-li"><a href="../index/arabic.php" class="m-menu-link"><i class="fas fa-home"></i>Arabic</a></li>
+                        <li class="m-menu-li"><a href="../index/arabic-bengali.php" class="m-menu-link"><i class="fas fa-home"></i>Arabic-Bangla</a></li>
+                        <li class="m-menu-li"><a href="../index/arabic-english.php" class="m-menu-link"><i class="fas fa-home"></i>Arabic-English</a></li>
+                        <li class="m-menu-li"><a href="../pages/about.php" class="m-menu-link"><i class="fas fa-home"></i>About</a></li>
                     </ul>
                 </div>
             </div>
@@ -64,11 +64,25 @@ require_once("../include/db.php");
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="text-center"><?php echo $_GET['name']; ?></h1>
+                        <p class="text-center">Total Ayat : <?php echo $_GET['ty']; ?></p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        
+                    <?php
+                    $query = "SELECT AyahTextAr, VerseIDAr FROM `quranar` WHERE SuraIDAr='{$_GET['no']}' order by SuraIDAr";
+                    $result = mysqli_query($connection, $query);
+                    if (!$result) {
+                        die("Query Failed.");
+                    } else {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            echo "<div class='ayah'>";
+                            echo "<div class=\"ayah-text\">{$row['AyahTextAr']}</span></div>";
+                            echo "<div class=\"ayah-id\">Ayat No. - {$row['VerseIDAr']}</div>";
+                            echo "</div>";
+                        }
+                    }
+                    ?>
                     </div>
                 </div>
             </div>
@@ -82,10 +96,3 @@ require_once("../include/db.php");
 </body>
 
 </html>
-
-
-<!-- 
-
-
-
- -->

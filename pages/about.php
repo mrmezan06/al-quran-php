@@ -9,7 +9,7 @@ require_once("../include/db.php");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $_GET['name']; ?></title>
+    <title>About</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.min.css" integrity="sha512-ykRBEJhyZ+B/BIJcBuOyUoIxh0OfdICfHPnPfBy7eIiyJv536ojTCsgX8aqrLQ9VJZHGz4tvYyzOM0lkgmQZGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="../index.css">
@@ -59,61 +59,8 @@ require_once("../include/db.php");
             </div>
         </div>
         <div class="main-content">
-            <!-- Main Content -->
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h1 class="text-center"><?php echo $_GET['name']; ?></h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <table class="table table-striped table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>Verse No.</th>
-                                    <th>Arabic</th>
-                                    <th>Bangla Translation</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-
-                                <?php
-                                // $query = "SELECT * FROM `quranar` where SuraIDAr = '{$_GET['no']}'";
-                                // echo $_GET['no'];
-                                // echo $_GET['ty'];
-
-
-                                $query = "SELECT bn_bengali.text, bn_bengali.aya, quranar.AyahTextAr FROM bn_bengali LEFT JOIN quranar ON quranar.VerseIDAr = bn_bengali.aya WHERE sura='{$_GET['no']}' LIMIT 300";
-                                // $query = "SELECT bn_bengali.text, bn_bengali.aya, quranar.AyahTextAr FROM bn_bengali LEFT JOIN quranar ON quranar.VerseIDAr = bn_bengali.aya  WHERE sura=1 LIMIT 7";
-                                $result = mysqli_query($connection, $query);
-                                if (!$result) {
-                                    die("Query Failed.");
-                                } else {
-                                    while ($row = mysqli_fetch_assoc($result)) {
-                                        if ($row['aya'] < $_GET['ty']) {
-                                            echo "<tr>";
-                                            echo "<td>{$row['aya']}</td>";
-                                            echo "<td>{$row['AyahTextAr']}</td>";
-                                            echo "<td>{$row['text']}</td>";
-                                            echo "</tr>";
-                                        } else {
-                                            echo "<tr>";
-                                            echo "<td>{$row['aya']}</td>";
-                                            echo "<td>{$row['AyahTextAr']}</td>";
-                                            echo "<td>{$row['text']}</td>";
-                                            echo "</tr>";
-                                            break;
-                                        }
-                                        // echo implode(" ",$row);
-
-                                    }
-                                }
-                                ?>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+            <div class="main-content-header">
+                <h3 class="main-content-header-title">About</h3>
             </div>
             <!-- End Main Content -->
         </div>

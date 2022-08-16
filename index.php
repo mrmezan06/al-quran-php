@@ -1,5 +1,5 @@
 <?php
-require_once("Include/DB.php");
+require_once("include/DB.php");
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +28,7 @@ require_once("Include/DB.php");
                 <div class="m-right">
                     <ul class="m-menu">
                         <li class="m-menu-li"><a href="index.php" class="m-menu-link"><i class="fas fa-home"></i>Home</a></li>
-                        <li class="m-menu-li"><a href="./pages/arabic.php" class="m-menu-link"><i class="fas fa-equals"></i>Arabic</a></li>
+                        <li class="m-menu-li"><a href="./index/arabic.php" class="m-menu-link"><i class="fas fa-equals"></i>Arabic</a></li>
                         <li class="m-menu-li"><a href="./pages/arabic-bengali.php" class="m-menu-link"><i class="fas fa-equals"></i>Arabic-Bangla</a></li>
                         <li class="m-menu-li"><a href="./pages/arabic-english.php" class="m-menu-link"><i class="fas fa-equals"></i>Arabic-English</a></li>
                         <li class="m-menu-li"><a href="./pages/about.php" class="m-menu-link"><i class="fas fa-info-circle"></i>About</a></li>

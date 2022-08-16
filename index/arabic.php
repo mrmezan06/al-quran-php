@@ -1,5 +1,5 @@
 <?php
-require_once("Include/DB.php");
+require_once("../include/DB.php");
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +12,7 @@ require_once("Include/DB.php");
     <title>Al Quran</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.min.css" integrity="sha512-ykRBEJhyZ+B/BIJcBuOyUoIxh0OfdICfHPnPfBy7eIiyJv536ojTCsgX8aqrLQ9VJZHGz4tvYyzOM0lkgmQZGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../index.css">
 </head>
 
 <body>
@@ -88,7 +88,7 @@ require_once("Include/DB.php");
                             echo "<td>{$row['eng_name']}</td>";
                             echo "<td>{$row['total_ayat']}</td>";
                             echo "<td>{$row['total_ruku']}</td>";
-                            echo "<td><a href=\"pages\single.php?no={$row['sura_no']}&name={$row['sura_name']}&ty={$row['total_ayat']}\">Read</a></td>";
+                            echo "<td><a href=\"..\pages\arabic.php?no={$row['sura_no']}&name={$row['sura_name']}&ty={$row['total_ayat']}\">Read</a></td>";
                             echo "</tr>";
                         }
                     }
