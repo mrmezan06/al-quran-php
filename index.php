@@ -45,15 +45,15 @@ require_once("include/DB.php");
                 </div>
                 <div class="sidebar-item-body">
                     <ul class="sidebar-item-body-list">
-                        <li class="sidebar-item-body-list-item"><a href="index.php" class="sidebar-item-body-list-item-link">All</a></li>
-                        <li class="sidebar-item-body-list-item"><a href="index.php" class="sidebar-item-body-list-item-link">Quran</a></li>
-                        <li class="sidebar-item-body-list-item"><a href="index.php" class="sidebar-item-body-list-item-link">Hadith</a></li>
-                        <li class="sidebar-item-body-list-item"><a href="index.php" class="sidebar-item-body-list-item-link">Hadith-Bangla</a></li>
-                        <li class="sidebar-item-body-list-item"><a href="index.php" class="sidebar-item-body-list-item-link">Hadith-English</a></li>
-                        <li class="sidebar-item-body-list-item"><a href="index.php" class="sidebar-item-body-list-item-link">Hadith-Arabic</a></li>
-                        <li class="sidebar-item-body-list-item"><a href="index.php" class="sidebar-item-body-list-item-link">Hadith-Bangla-English</a></li>
-                        <li class="sidebar-item-body-list-item"><a href="index.php" class="sidebar-item-body-list-item-link">Hadith-Bangla-Arabic</a></li>
-                        <li class="sidebar-item-body-list-item"><a href="index.php" class="sidebar-item-body-list-item-link">Hadith-English-Arabic</a></li>
+                        <li class="sidebar-item-body-list-item"><a href="#" class="sidebar-item-body-list-item-link">All</a></li>
+                        <li class="sidebar-item-body-list-item"><a href="#" class="sidebar-item-body-list-item-link">Quran</a></li>
+                        <li class="sidebar-item-body-list-item"><a href="#" class="sidebar-item-body-list-item-link">Hadith</a></li>
+                        <li class="sidebar-item-body-list-item"><a href="#" class="sidebar-item-body-list-item-link">Hadith-Bangla</a></li>
+                        <li class="sidebar-item-body-list-item"><a href="#" class="sidebar-item-body-list-item-link">Hadith-English</a></li>
+                        <li class="sidebar-item-body-list-item"><a href="#" class="sidebar-item-body-list-item-link">Hadith-Arabic</a></li>
+                        <li class="sidebar-item-body-list-item"><a href="#" class="sidebar-item-body-list-item-link">Hadith-Bangla-English</a></li>
+                        <li class="sidebar-item-body-list-item"><a href="#" class="sidebar-item-body-list-item-link">Hadith-Bangla-Arabic</a></li>
+                        <li class="sidebar-item-body-list-item"><a href="#" class="sidebar-item-body-list-item-link">Hadith-English-Arabic</a></li>
                     </ul>
                 </div>
             </div>
@@ -104,46 +104,3 @@ require_once("include/DB.php");
 </body>
 
 </html>
-
-
-<!-- 
-
-<div class="col-md-10">
-                <table class="table table-striped table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Sura Number</th>
-                            <th>Sura Name</th>
-                            <th>Sura Translation</th>
-                            <th>English Name</th>
-                            <th>Total Ayat</th>
-                            <th>Total Ruku</th>
-                            <th>Read</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <?php
-                    $query = "SELECT * FROM `sura` order by sura_no";
-                    $result = mysqli_query($connection, $query);
-                    if (!$result) {
-                        die("Query Failed.");
-                    } else {
-                        while ($row = mysqli_fetch_assoc($result)) {
-
-                            echo "<tr>";
-                            echo "<td>{$row['sura_no']}</td>";
-                            echo "<td>{$row['sura_name']}</td>";
-                            echo "<td>{$row['meaning']}</td>";
-                            echo "<td>{$row['eng_name']}</td>";
-                            echo "<td>{$row['total_ayat']}</td>";
-                            echo "<td>{$row['total_ruku']}</td>";
-                            echo "<td><a href=\"pages\single.php?no={$row['sura_no']}&name={$row['sura_name']}&ty={$row['total_ayat']}\">Read</a></td>";
-                            echo "</tr>";
-                        }
-                    }
-                    ?>
-                    </tbody>
-                </table>
-            </div>
-
- -->

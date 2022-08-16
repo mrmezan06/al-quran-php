@@ -45,15 +45,15 @@ require_once("../include/db.php");
                 </div>
                 <div class="sidebar-item-body">
                     <ul class="sidebar-item-body-list">
-                        <li class="sidebar-item-body-list-item"><a href="index.php" class="sidebar-item-body-list-item-link">All</a></li>
-                        <li class="sidebar-item-body-list-item"><a href="index.php" class="sidebar-item-body-list-item-link">Quran</a></li>
-                        <li class="sidebar-item-body-list-item"><a href="index.php" class="sidebar-item-body-list-item-link">Hadith</a></li>
-                        <li class="sidebar-item-body-list-item"><a href="index.php" class="sidebar-item-body-list-item-link">Hadith-Bangla</a></li>
-                        <li class="sidebar-item-body-list-item"><a href="index.php" class="sidebar-item-body-list-item-link">Hadith-English</a></li>
-                        <li class="sidebar-item-body-list-item"><a href="index.php" class="sidebar-item-body-list-item-link">Hadith-Arabic</a></li>
-                        <li class="sidebar-item-body-list-item"><a href="index.php" class="sidebar-item-body-list-item-link">Hadith-Bangla-English</a></li>
-                        <li class="sidebar-item-body-list-item"><a href="index.php" class="sidebar-item-body-list-item-link">Hadith-Bangla-Arabic</a></li>
-                        <li class="sidebar-item-body-list-item"><a href="index.php" class="sidebar-item-body-list-item-link">Hadith-English-Arabic</a></li>
+                        <li class="sidebar-item-body-list-item"><a href="#" class="sidebar-item-body-list-item-link">All</a></li>
+                        <li class="sidebar-item-body-list-item"><a href="#" class="sidebar-item-body-list-item-link">Quran</a></li>
+                        <li class="sidebar-item-body-list-item"><a href="#" class="sidebar-item-body-list-item-link">Hadith</a></li>
+                        <li class="sidebar-item-body-list-item"><a href="#" class="sidebar-item-body-list-item-link">Hadith-Bangla</a></li>
+                        <li class="sidebar-item-body-list-item"><a href="#" class="sidebar-item-body-list-item-link">Hadith-English</a></li>
+                        <li class="sidebar-item-body-list-item"><a href="#" class="sidebar-item-body-list-item-link">Hadith-Arabic</a></li>
+                        <li class="sidebar-item-body-list-item"><a href="#" class="sidebar-item-body-list-item-link">Hadith-Bangla-English</a></li>
+                        <li class="sidebar-item-body-list-item"><a href="#" class="sidebar-item-body-list-item-link">Hadith-Bangla-Arabic</a></li>
+                        <li class="sidebar-item-body-list-item"><a href="#" class="sidebar-item-body-list-item-link">Hadith-English-Arabic</a></li>
                     </ul>
                 </div>
             </div>
