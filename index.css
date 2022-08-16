@@ -1,81 +1,190 @@
-.container-fluid {
-    padding: 0;
-    margin: 0;
-}
-
-.dflex {
+/* Navbar Area */
+.m-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
     display: flex;
-    align-items: flex-start;
-    justify-content: right;
-    background-color: #24a799;
-    color: #fff;
-    padding: 0px;
-    height: 40px;
+    flex-direction: column;
 }
 
-.vflex {
-    background-color: #299388;
-    height: 40px;
-}
-
-.vflex h1 {
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 0px;
-    margin-top: 1px;
-}
-
-.hmenu {
+.m-nav {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    list-style: none;
-    font-size: 16px;
+    justify-content: space-between;
+    flex-grow: 1;
+    background-color: #24A799;
+    height: 60px;
 }
 
-.h-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.m-nav-logo {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    flex: 1;
+}
+
+.m-nav-logo .logo {
+    font-size: 16px;
+    font-weight: bold;
     margin-left: 20px;
-    height: 40px;
     text-align: center;
 }
 
-.h-item a {
-    color: #fff;
+.m-nav-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 10;
+    height: 60px;
+}
+
+.m-left {
+    margin-left: 60px;
+    flex-grow: 4;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.m-right {
+    flex-grow: 8;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.m-menu {
+    flex-grow: 1;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+    justify-content: center;
+}
+
+.m-menu-li {
+    flex-grow: 1;
+    text-align: center;
+    height: 73px;
+    padding: 25px;
+}
+
+.m-menu-li a {
     text-decoration: none;
-    padding: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
 }
 
-.h-item a i {
-    margin-right: 5px;
+.m-menu-li a i {
+    margin-right: 10px;
 }
 
-.h-item:hover {
-    background-color: #299388;
+
+
+.m-menu-li:first-child {
+    margin-right: 20px;
+    margin-left: 0;
+}
+.m-menu-li:last-child {
+    margin-right: 20px;
 }
 
-.vmenu {
+.m-menu-li:hover {
+   background-color: #0e4d46;
+}
+
+/* Content Sidebar Area */
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #222D32
+}
+
+.sidebar {
+    width: 12%;
+    height: 100vh;
+    background-color: #222D32;
+}
+
+.sidebar-item {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    list-style: none;
-    font-size: 16px;
-    background-color: #222d32;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    width: 307px;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-.vmenu-header, .vmenu-item {
-    color: #fff;
+.sidebar-item-header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #1A2226;
+}
+
+.sidebar-item-header-title {
+    color: rgb(176, 170, 170);
+    font-size: 16px;
     font-weight: bold;
-    font-size: 24px;
-    margin-top: 25px;
-    margin-left: 20px;
-    line-height: 20px;
-    letter-spacing: 2.5px;
+    text-align: center;
+}
+
+.sidebar-item-body {
+    width: 100%;
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #222D32;
+}
+
+.sidebar-item-body-list {
+    list-style: none;
+}
+
+.sidebar-item-body-list-item {
+    width: 225.59px;
+    height: 50px;
+    display: block;
+    margin-left: -43px;
+    text-align: center;
+    background-color: #222D32;
+    padding: 10px;
+}
+
+.sidebar-item-body-list-item:hover {
+    background-color: #294552;
+}
+
+.sidebar-item-body-list-item a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+    font-weight: bold;
+}
+
+.main-content {
+    width: 88%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #fff;
 }
