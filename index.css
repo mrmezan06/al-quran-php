@@ -30,6 +30,7 @@
   font-weight: bold;
   margin-left: 20px;
   text-align: center;
+  cursor: pointer;
 }
 
 .m-nav-item {
