@@ -4,6 +4,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .m-nav {
@@ -182,6 +183,17 @@
   align-items: center;
   justify-content: flex-start;
   background-color: #fff;
+  overflow: hidden;
+}
+
+.about-content {
+  width: 88%;
+  height: 93vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #161623;
+  /* border: 1px solid red; */
   overflow: hidden;
 }
 

@@ -12,6 +12,7 @@ require_once("../include/db.php");
     <title>About</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.min.css" integrity="sha512-ykRBEJhyZ+B/BIJcBuOyUoIxh0OfdICfHPnPfBy7eIiyJv536ojTCsgX8aqrLQ9VJZHGz4tvYyzOM0lkgmQZGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="../index.css">
 </head>
 
@@ -27,7 +28,7 @@ require_once("../include/db.php");
                 </div>
                 <div class="m-right">
                     <ul class="m-menu">
-                    <li class="m-menu-li"><a href="../index.php" class="m-menu-link"><i class="fas fa-home"></i>Home</a></li>
+                        <li class="m-menu-li"><a href="../index.php" class="m-menu-link"><i class="fas fa-home"></i>Home</a></li>
                         <li class="m-menu-li"><a href="../index/arabic.php" class="m-menu-link"><i class="fas fa-equals"></i>Arabic</a></li>
                         <li class="m-menu-li"><a href="../index/arabic-bengali.php" class="m-menu-link"><i class="fas fa-equals"></i>Arabic-Bangla</a></li>
                         <li class="m-menu-li"><a href="../index/arabic-english.php" class="m-menu-link"><i class="fas fa-equals"></i>Arabic-English</a></li>
@@ -58,11 +59,72 @@ require_once("../include/db.php");
                 </div>
             </div>
         </div>
-        <div class="main-content">
-            <div class="main-content-header">
-                <h3 class="main-content-header-title">About</h3>
+        <div class="about-content">
+            <div class="container">
+                <div class="card">
+                    <div class="content">
+                        <div class="imgbx">
+                            <img src="team/team22.jpg" alt="Team 1" width="320px" height="320px">
+                        </div>
+                        <div class="contentbx">
+                            <h3>Mejanur R.<br><span>Front-End Designer</span></h3>
+                        </div>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i:1">
+                            <a href="https://www.facebook.com/mejanur.mezan.3/" target="_blank"><i class="fab fa-facebook-square" aria-hidden="true"></i></a>
+                        </li>
+                        <li style="--i:2">
+                            <a href="https://twitter.com/MejanurMezan/" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li style="--i:3">
+                            <a href="https://www.instagram.com/mejanur.mezan.3/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <div class="imgbx">
+                            <img src="team/team.jpg" alt="Team 2" width="320px" height="320px">
+                        </div>
+                        <div class="contentbx">
+                            <h3>Mejanur R.<br><span>UI & UX Designer</span></h3>
+                        </div>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i:1">
+                            <a href="https://www.facebook.com/mejanur.mezan.3/" target="_blank"><i class="fab fa-facebook-square" aria-hidden="true"></i></a>
+                        </li>
+                        <li style="--i:2">
+                            <a href="https://twitter.com/MejanurMezan/" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li style="--i:3">
+                            <a href="https://www.instagram.com/mejanur.mezan.3/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <div class="imgbx">
+                            <img src="team/team22.jpg" alt="Team 3" width="320px" height="320px">
+                        </div>
+                        <div class="contentbx">
+                            <h3>Mejanur R.<br><span>Back-End Designer</span></h3>
+                        </div>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i:1">
+                            <a href="https://www.facebook.com/mejanur.mezan.3/" target="_blank"><i class="fab fa-facebook-square" aria-hidden="true"></i></a>
+                        </li>
+                        <li style="--i:2">
+                            <a href="https://twitter.com/MejanurMezan/" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li style="--i:3">
+                            <a href="https://www.instagram.com/mejanur.mezan.3/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></i></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <!-- End Main Content -->
         </div>
     </div>
 
