@@ -1,4 +1,7 @@
-# Al Quran
+# Al Quran ![](https://img.shields.io/badge/Server-Live-brightgreen)
+
+## Technology
+![](https://img.shields.io/badge/Language-PHP-orange) &nbsp; ![](https://img.shields.io/badge/Database-MySQL-blue)
 
 ## Pages
 
@@ -22,3 +25,6 @@ localhost/pages/single.php?no=1&name=আল%20ফাতিহা&ty=7
 ## Preview
 <img src="index.png" />
 <img src="fatiha.png" />
+
+## Live ![](https://img.shields.io/badge/Server-Live-brightgreen)
+* [![](https://img.shields.io/badge/-Live-brightgreen)](https://islamic-life.000webhostapp.com/)
